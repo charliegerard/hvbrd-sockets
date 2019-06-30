@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "name": "hvbrd-sockets",
+    "builds": [
+        { "src": "server.js", "use": "@now/node-server", "config": { "maxLambdaSize": "10mb" }},
+        { "src": "public/**/*.*", 
+            "use": "@now/static"
+        },
+        { "src": "public/desktop/*.css", "use": "@now/static" }
+    ],
+    "routes": [
+        { "src": "/", "dest": "public/desktop/index.html" },
+        { "src": "/mobile", "dest": "public/mobile/$1" },
+        { "src": "/js/*", "dest": "public/desktop/*" }
+    ]
+}

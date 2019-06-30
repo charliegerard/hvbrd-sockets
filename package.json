@@ -1,0 +1,27 @@
+{
+  "name": "hvbrd-sockets",
+  "version": "1.0.0",
+  "description": "Interactive hoverboard experiment using a mobile phone and web sockets.",
+  "main": "server.js",
+  "engines": {
+    "node": "10.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charliegerard/hvbrd-sockets.git"
+  },
+  "author": "Charlie Gerard <charlie.a.gerard@gmail.com>",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/charliegerard/hvbrd-sockets/issues"
+  },
+  "homepage": "https://github.com/charliegerard/hvbrd-sockets#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.2.0"
+  }
+}

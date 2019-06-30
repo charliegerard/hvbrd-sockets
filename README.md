@@ -1,18 +1,34 @@
-# HVBRD
+# HVBRD (v2 with web sockets)
 
-Interactive experiment connecting a Daydream controller to the web to provide some kind of digital hoverboard experience.
+Interactive hoverboard experiment using a mobile phone and web sockets.
 
-# To do:
+**The original version of this project was built using a Daydream controller.
+To make it accessible to more people, I've changed it to use a mobile phone to connect to the browser via web sockets.**
 
-- [x] Fix color of the terrain
-- [x] Fix color of the background with missing sun
-- [x] Add score
-- [x] Make terrain move only after game has started
-- [x] Add music
-- [x] Check 3D model for hoverboard
-- [x] Style obstacles
-- [x] Replace cube with skateboard
-- [x] Style sky
-- [x] Add postprocessing effect on collision
-- [] Find a way to fade out the sound before the end
-- [] Fix score
+
+Blog post here: 
+
+
+
+## Demo
+
+
+## Tech stack
+
+* HTML / CSS
+* (Vanilla) JavaScript
+* DeviceOrientation Web API
+* Three.js
+* Node.js w/ socket.io
+
+
+## Current commands
+
+After opening the link on mobile, place the phone on a skateboard and start tilting it from left to right to avoid obstacles.
+
+There is no particular goal or point system at the moment.
+
+
+
+
+
