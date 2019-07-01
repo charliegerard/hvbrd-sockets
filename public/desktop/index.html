@@ -5,16 +5,16 @@
     <title>Hoverboard game</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/103/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.min.js"></script>
-    <script src="/js/noiseSimplex.js"></script>
-    <script src="/js/postprocessing/CopyShader.js"></script>
-    <script src="/js/postprocessing/DigitalGlitch.js"></script>
-    <script src="/js/postprocessing/EffectComposer.js"></script>
-    <script src="/js/postprocessing/ShaderPass.js"></script>
-    <script src="/js/postprocessing/GlitchPass.js"></script>
+    <script src="js/noiseSimplex.js"></script>
+    <script src="js/postprocessing/CopyShader.js"></script>
+    <script src="js/postprocessing/DigitalGlitch.js"></script>
+    <script src="js/postprocessing/EffectComposer.js"></script>
+    <script src="js/postprocessing/ShaderPass.js"></script>
+    <script src="js/postprocessing/GlitchPass.js"></script>
     <script src="js/OBJLoader.js"></script>
     <script src="js/MTLLoader.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Teko:400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <section class="intro">
@@ -34,8 +34,7 @@
   </section>
   <audio src="./sound/explode.mp3" preload="auto" id="explode_sound"></audio>
 
-  <!-- <script type="text/javascript" src="/socket.io/socket.io.js"></script> -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.slim.js"></script>
-  <script src="./index.js"></script>
+  <script type="text/javascript" src="./../socket.io/socket.io.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>

@@ -4,8 +4,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 app.use('/', express.static(__dirname + '/public/desktop'));
-
-app.use('/mobile', express.static(__dirname + '/public/mobile'))
+app.use('/mobile', express.static(__dirname + '/public/mobile'));
 
 io.on('connection', function(socket){
     socket.on('mobile connected', function(){
@@ -13,7 +12,7 @@ io.on('connection', function(socket){
     })
 
     socket.on('orientation', function(e){
-        io.emit('mobile orientation', e);
+      io.emit('mobile orientation', e);
     })
 })
 

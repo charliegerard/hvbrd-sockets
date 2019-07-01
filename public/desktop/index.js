@@ -17,7 +17,6 @@ let skateboard, rock, rockMesh;
 var bluetoothConnected = false;
 var gameStarted = false;
 var zOrientation = 0;
-let counter = 3;
 var sound;
 var glitchPass, composer;
 
@@ -37,7 +36,7 @@ function setup(){
 
 function setupSound(){
 	sound = new Howl({
-    src: ['./assets/delorean-dynamite-long-2.m4a'],
+    src: ['assets/delorean-dynamite-long-2.m4a'],
     loop: true,
   });
 }
@@ -72,7 +71,7 @@ function setupScene() {
 function setup3DModel(){
 	var loader = new THREE.OBJLoader();
 	loader.load(
-		'./assets/Skateboard.obj',
+		'assets/Skateboard.obj',
 		function ( object ) {
 			skateboard = object;
 			skateboard.position.set(0, -19, -0.1);
@@ -97,7 +96,7 @@ function setup3DModel(){
 function setupRockModel(){
 	var loader = new THREE.OBJLoader();
 	loader.load(
-		'./assets/PUSHILIN_rock.obj',
+		'assets/PUSHILIN_rock.obj',
 		function ( object ) {
 			rock = object;
 			rock.position.set(1, -18, -0.1);
@@ -280,21 +279,6 @@ function makeRandomCube() {
 	scene.add(object);
 }
 
-function displayCounter(){
-  const counterDiv = document.getElementsByClassName('counter')[0];
-	counterDiv.innerHTML = counter;
-  if(counter > 0){
-    counter--;
-  } else if(counter === 0){
-    clearInterval(interval);
-		counterDiv.classList.add('fade-out');
-		gameStarted = true;
-		draw();
-  }
-}
-
-let interval;
-
 window.onload = () => {
     let previousValue;
     const connectButton = document.getElementById('connect');
@@ -310,15 +294,11 @@ window.onload = () => {
                     title.classList.add('fade-out');
                     sound.play()
                     sound.fade(0, 1, 3000);
-    
-            interval = setInterval(function(){
-                displayCounter();
-            },1000);
         }
 
-        if(previousValue !== e.data){
-            zOrientation = -e.data / 100
+        if(previousValue !== e){
+            zOrientation = -e / 100
         }
-        previousValue = e.data
+        previousValue = e
     })
 }
