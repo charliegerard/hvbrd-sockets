@@ -6,12 +6,13 @@ Interactive hoverboard experiment using a mobile phone and web sockets.
 To make it accessible to more people, I've changed it to use a mobile phone to connect to the browser via web sockets.**
 
 
-Blog post here: 
+### Blog post here: 
 
 
 
 ## Demo
 
+![demo gif](hvbrd.gif)
 
 ## Tech stack
 
