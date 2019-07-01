@@ -1,0 +1,30 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(#610261,#9f1c9f);
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Teko', Arial;
+}
+
+h1.title{
+    font-size: 3em;
+    margin-bottom: 1em;
+    font-family: "Permanent Marker", "Helvetica";
+    display: block;
+    margin-top: 0;
+}
+
+p{
+    font-size: 1.6em;
+    letter-spacing: .5px;
+    font-weight: 400;
+}
