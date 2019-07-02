@@ -318,7 +318,7 @@ window.onload = () => {
 			}
 	
 			if(previousValue !== e){
-				zOrientation = -e / 100
+				zOrientation = -e / 300
 			}
 			previousValue = e
 		})
