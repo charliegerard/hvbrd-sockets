@@ -1,12 +1,11 @@
 let ready = false;
 window.onload = function(){
+    const noSleep = new NoSleep();
+    noSleep.disable();
     const socket = io();
+    const button = document.getElementsByTagName('button')[0];
   
-    if(isMobile()){
-        socket.emit('mobile connected');
-
-        socket.on('start', () => ready = true)
-
+    if(isMobile()){        
         function handleOrientation(e){
             if(ready){
                 socket.emit('orientation', e.gamma);
@@ -14,6 +13,14 @@ window.onload = function(){
         }
 
         window.addEventListener("deviceorientation", handleOrientation, true);
+        button.addEventListener('click', enableNoSleep, false);
+
+        function enableNoSleep() {
+            socket.emit('mobile connected');
+            socket.on('start', () => ready = true)
+            noSleep.enable();
+            button.removeEventListener('touchstart', enableNoSleep, false);
+        }
     }
 }
 

@@ -2,15 +2,6 @@ html{
   height: 100%;
 }
 
-.ThreeJS {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  top: 50px;
-  z-index: 10;
-  position: absolute;
-}
-
 .hvbrd-icon{
   width: 30%;
 }
@@ -66,10 +57,19 @@ body{
   font-size: 1.5em;
 }
 
+#ThreeJS{
+  display: none;
+}
+
+
 @media only screen and (min-width: 500px) {
   .intro{
     position: absolute;
     z-index: 10;
+    display: block;
+  }
+
+  #ThreeJS {
     display: block;
   }
 

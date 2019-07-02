@@ -10,6 +10,7 @@ var scoreText = document.getElementById("score");
 var id = 0;
 var crashId = " ";
 var lastCrashId = " ";
+let counter = 3;
 
 let scene, camera, renderer, simplex, plane, geometry, xZoom, yZoom, noiseStrength;
 let skateboard, rock, rockMesh;
@@ -19,6 +20,10 @@ var gameStarted = false;
 var zOrientation = 0;
 var sound;
 var glitchPass, composer;
+
+setup();
+init();
+draw();
 
 function setup(){
 	setupNoise();
@@ -275,12 +280,23 @@ function makeRandomCube() {
 	scene.add(object);
 }
 
+function displayCounter(){
+	const counterDiv = document.getElementsByClassName('counter')[0];
+	  counterDiv.innerHTML = counter;
+	if(counter > 0){
+	  counter--;
+	} else if(counter === 0){
+	  clearInterval(interval);
+		  counterDiv.classList.add('fade-out');
+		  gameStarted = true;
+		  draw();
+	}
+}
+
+let interval;
+
 window.onload = () => {
 	if(!isMobile()){
-		setup();
-		init();
-		draw();
-	
 		let previousValue;
 		const connectButton = document.getElementById('connect');
 	
@@ -295,6 +311,10 @@ window.onload = () => {
 						title.classList.add('fade-out');
 						sound.play()
 						sound.fade(0, 1, 3000);
+
+				interval = setInterval(function(){
+					displayCounter();
+					},1000);
 			}
 	
 			if(previousValue !== e){
