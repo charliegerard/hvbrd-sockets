@@ -50,9 +50,46 @@ body{
   display: flex;
 }
 
-.intro{
+.intro, .sun {
+  display: none;
+}
+
+.mobile-message{
+  display: block;
+  margin: 0 auto;
+  color: white;
   position: absolute;
   z-index: 10;
+  width: 80%;
+  text-align: center;
+  font-family: "Teko";
+  font-size: 1.5em;
+}
+
+@media only screen and (min-width: 600px) {
+  .intro{
+    position: absolute;
+    z-index: 10;
+    display: block;
+  }
+
+  .sun{
+    width: 15em;
+    height: 15em;
+    border-radius: 7.5em;
+    box-shadow: 0px 0px 75px rgb(237, 71, 93);
+    background: linear-gradient(to bottom, orange 1%, yellow 65%,#5a008a 100%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+  }
+
+  .mobile-message{
+    display: none;
+  }
 }
 
 h1.title{
@@ -80,19 +117,6 @@ div#connect{
   cursor: pointer;
   font-family: "Teko";
   transition: opacity 1s ease-out;
-}
-
-.sun{
-  width: 15em;
-  height: 15em;
-  border-radius: 7.5em;
-  box-shadow: 0px 0px 75px rgb(237, 71, 93);
-  background: linear-gradient(to bottom, orange 1%, yellow 65%,#5a008a 100%);
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -10;
 }
 
 div#connect.fade-out{

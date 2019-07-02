@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Hoverboard game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/103/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.min.js"></script>
     <script src="js/noiseSimplex.js"></script>
@@ -20,7 +21,7 @@
   <section class="intro">
     <h1 class="title">HOVERBOARD</h1>
     <div id="connect">
-      <p>To start playing, visit ... on your mobile and place it on a skateboard!</p>
+      <p>To start playing, visit /mobile on your mobile and place it on a skateboard!</p>
       <img class="hvbrd-icon" src="./assets/hvbrd-icon.png" alt="icon showing how to place the phone in the middle of the skateboard"/>
     </div>
   </section>
@@ -33,6 +34,11 @@
     <div class="counter"></div>
   </section>
   <audio src="./sound/explode.mp3" preload="auto" id="explode_sound"></audio>
+
+  <section class="mobile-message">
+    <p>It looks like you're using a mobile; it's a good thing, you'll need it, but the page you're seeing right now needs to be visited on a computer!</p>
+    <p>Come back when you're able to use your desktop/laptop and it will tell you what to do with your phone! 😃</p>
+  </section>
 
   <script type="text/javascript" src="./../socket.io/socket.io.js"></script>
   <script src="index.js"></script>
