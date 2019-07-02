@@ -15,7 +15,7 @@ Try it live here: [http://bit.ly/hvbrd](http://bit.ly/hvbrd)
 
 * [Medium blog post](https://medium.com/@devdevcharlie/hvbrd-c6266ee31461)
 
-* [Dev.to post](https://bit.ly/hvbrd-dev)
+* [Dev.to post](http://bit.ly/hvbrd-post)
 
 * Code also available on [CodeSandbox](https://codesandbox.io/s/hvbrd-sockets-ln0mi)
 
