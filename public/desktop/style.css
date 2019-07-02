@@ -66,7 +66,7 @@ body{
   font-size: 1.5em;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 500px) {
   .intro{
     position: absolute;
     z-index: 10;

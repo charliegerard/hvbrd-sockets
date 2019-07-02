@@ -28,3 +28,29 @@ p{
     letter-spacing: .5px;
     font-weight: 400;
 }
+
+.desktop-message{
+    display: none;
+}
+
+main{
+    display: block;
+}
+
+@media only screen and (min-width: 500px) {  
+    .desktop-message{
+        display: block;
+        margin: 0 auto;
+        color: white;
+        position: absolute;
+        z-index: 10;
+        width: 80%;
+        text-align: center;
+        font-family: "Teko";
+        font-size: 1.5em;
+    }
+
+    main{
+        display: none;
+    }
+}
